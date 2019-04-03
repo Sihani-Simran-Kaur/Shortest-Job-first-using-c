@@ -1,0 +1,26 @@
+	temp=bt[i];
+		bt[i]=bt[p];
+		bt[p]=temp;
+		
+		temp=pro[i];
+		pro[i]=pro[p];
+		pro[p]=temp;
+	}
+	tat=0;
+		for(j=0;j<5;j++)
+		{
+		tat+=bt[j];
+		//printf("%d\n",tat);
+		ta[j]=tat;
+	    }
+	    printf("Processes\tBurstTime\tTurnAroundTime\n");
+	    for(i=0;i<5;i++)
+	{
+		printf("p%d:",pro[i]);
+		printf("\t\t");
+		printf("%d",bt[i]);
+		printf("\t\t");
+		printf("%d",ta[i]);
+		printf("\n");
+	}
+}
